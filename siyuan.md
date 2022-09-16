@@ -11,7 +11,15 @@
 ```shell
 mkdir -p /siyuan/workspace
 chown -R 1000:1000 /siyuan/workspace
-docker run -dit -v /siyuan/workspace:/siyuan/workspace -p 6806:6806 b3log/siyuan -resident -workspace /siyuan/workspace -accessAuthCode 123456
+```
+
+```shell
+docker run -dit -v /siyuan/workspace:/siyuan/workspace \
+                -p 6806:6806 \
+                b3log/siyuan \
+                -resident \
+                -workspace /siyuan/workspace \
+                -accessAuthCode 123456
 ```
 
 ## 3.🏷 open your browser, then access the URL
