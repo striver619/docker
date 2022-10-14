@@ -1,0 +1,10 @@
+#!/bin/sh
+
+docker run -dit \
+           --privileged \
+           --name c75-demo-1 \
+           -h hw-c75-1 \
+           -p 10001:22 \
+           -p 20002:80 \
+           daocloud.io/library/centos:centos7.5.1804 \
+           /usr/sbin/init
