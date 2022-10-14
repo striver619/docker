@@ -1,0 +1,26 @@
+// daemon.json
+
+{
+  "registry-mirrors": [
+    "https://bjtzu1jb.mirror.aliyuncs.com",
+    "http://f1361db2.m.daocloud.io",
+    "https://hub-mirror.c.163.com",
+    "https://docker.mirrors.ustc.edu.cn",
+    "https://reg-mirror.qiniu.com",
+    "https://dockerhub.azk8s.cn",
+    "https://registry.docker-cn.com"
+  ],
+  "insecure-registries": [],
+  "debug": false,
+  "builder": {
+    "gc": {
+      "defaultKeepStorage": "20GB",
+      "enabled": true
+    }
+  },
+  "experimental": false,
+  "features": {
+    "buildkit": true
+  }
+}
+
