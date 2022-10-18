@@ -1,0 +1,9 @@
+#!/bin/bash
+
+# docker run -dit --privileged \
+#            --name c75-qc-1 \
+#            -h hw-c75-qc-1 \
+#            -p 30099:22 \
+#            c75-qc:v1
+
+docker run -dit --privileged c75-qc:v1
