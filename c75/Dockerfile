@@ -12,7 +12,8 @@ RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime; \
     sed -i 's/http/&s/' /etc/yum.repos.d/CentOS-Base.repo; \
     sed -i 's/gpgcheck=1/gpgcheck=0/' /etc/yum.repos.d/CentOS-Base.repo; \
     yum clean all; \
-    yum makecache;
+    yum makecache; \
+    yum install -y vim openssh-server openssh-clients net-tools
 
 RUN (cd /lib/systemd/system/sysinit.target.wants/; for i in *; do [ $i == systemd-tmpfiles-setup.service ] || rm -f $i; done); \
      rm -f /lib/systemd/system/multi-user.target.wants/*; \
